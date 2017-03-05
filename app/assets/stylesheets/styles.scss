@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-content {
+  background-color: #141414;
+}
+
+.big-mask img {
+  max-width: 100%;
+}
+
+
+.big-mask {
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 3.5s;
+	-webkit-animation-duration: 3.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(5%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translateY(0%);
+	}
+	50% {
+		-webkit-transform: translateY(5%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+	}
+}
+
+/* the slides */
+.carousel-image {
+  margin: 0 10px;
+  border-radius: 2em;
+}
+/* the parent */
+.slick-carousel {
+  margin: 0 -10px;
+}
+
+.carousel {
+  background-color: #0f0f0f;
+  padding: 20px;
+}
+
+.navbar-custom {
+  border-bottom: 1px solid white;
+  min-height: 75px;
+  background-color: #0f0f0f;
+  margin-bottom: 20px;
+}
+
+.navbar-brand-custom {
+  padding: 0 14px;
+}
+
+.menu-link {
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.home-page {
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.header {
+  color: white;
+
+  h1 {
+    font-size: 4em;
+  }
+}
+
+.small-bio {
+  color: white;
+
+  h1 {
+    font-size: 2em;
+  }
+
+  hr {
+    color: white;
+  }
+}
+
+.about-section {
+  color: white;
+
+  h1 {
+    font-size: 2em;
+  }
+
+  hr {
+    color: white;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+}
