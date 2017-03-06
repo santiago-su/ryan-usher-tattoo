@@ -15,6 +15,10 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'cloudinary'
 gem 'mail_form'
+gem 'photoswipe-rails'
+gem 'devise'
+gem 'foreman'
+gem 'dotenv-rails', groups: [:development, :test]
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

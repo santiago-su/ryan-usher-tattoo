@@ -58,6 +58,10 @@ body {
   margin: 0 -10px;
 }
 
+.gallery-image {
+  margin: 10px;
+}
+
 .carousel {
   background-color: #0f0f0f;
   padding: 20px;
@@ -180,8 +184,9 @@ body {
 
 .social {
   position: fixed;
-  top: 100px;
+  top: 380px;
   z-index: 200;
+  width: 40px;
 }
 
 
@@ -257,4 +262,12 @@ body {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.image-index {
+  color: white;
+}
+
+#images_form {
+  color: white;
 }

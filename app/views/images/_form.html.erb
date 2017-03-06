@@ -1,0 +1,17 @@
+<div id="images_form">
+  <%= form_for @image, :html => {:multipart => true} do |f| %>
+    <%if @image.errors.any?%>
+      <% @image.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+      <% end %>
+    <% end %>
+
+    <div class="form-group">
+      <%= cl_image_upload_tag(:image_url) %>
+    </div>
+    <br><br><br><br>
+    <div class="form-group">
+      <%= f.submit "Upload new image", class: 'btn btn-primary', id: 'upload-new-image' %>
+    </div>
+  <% end %>
+</div>

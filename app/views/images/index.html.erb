@@ -1,0 +1,23 @@
+<div class='row image-index'>
+  <div class="col-md-12">
+    <%= link_to 'Upload new image', new_image_path, class: "btn btn-lg btn-primary pull-right" %>
+    <table class="table">
+      <thead>
+        <tr>
+          <td><h4 class="lead">Image Thumbnail</h4></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @images.each do |image| %>
+          <tr>
+            <td><%= cl_image_tag(image.image_url, :crop => :fill, :width => 50, :height => 50) %></td>
+            <td></td>
+            <td><%= link_to 'Destroy', image_path(image), method: :delete, data: { confirm: "You sure m8?" }, class: 'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

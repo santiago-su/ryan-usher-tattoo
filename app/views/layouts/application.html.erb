@@ -24,28 +24,34 @@
             <span class="icon-bar"></span>
           </button>
           <%= link_to root_path do %>
-            <p class="lead navbar-text navbar-ryan">RYAN USHER</p>
+            <p class="lead navbar-text navbar-ryan">RYAN USSHER</p>
           <% end %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navigation-links">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active menu-link"><%= link_to "HOME", root_path %></li>
-            <li class="menu-link"><%= link_to "ABOUT", about_path %></li>
-            <li class="menu-link"><%= link_to "GALLERY", about_path %></li>
-            <li class="menu-link"><%= link_to "CONTACT", contacts_path %></li>
+            <li class="<%= 'active ' if current_page?(root_path) %> menu-link"><%= link_to "HOME", root_path %></li>
+            <li class="<%= 'active ' if current_page?(about_path) %>menu-link"><%= link_to "ABOUT", about_path %></li>
+            <li class="<%= 'active ' if current_page?(gallery_path) %>menu-link"><%= link_to "GALLERY", gallery_path %></li>
+            <li class="<%= 'active ' if current_page?(contacts_path) %>menu-link"><%= link_to "CONTACT", contacts_path %></li>
+            <% if current_user %>
+              <li class="menu-link"><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
+            <% end %>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
     <div class="container-fluid home-page">
-      <nav class="social">
-        <ul>
-          <li><a href="http://www.instagram.com/ryanussher/" target="_blank">Instagram <i class="fa fa-instagram"></i></a></li>
-          <li><a href="http://facebook.com/" target="_blank">Facebook <i class="fa fa-facebook"></i></a></li>
-        </ul>
-      </nav>
+      <% if !current_user %>
+        <nav class="social">
+          <ul>
+            <li><a href="http://www.instagram.com/ryanussher/" target="_blank">Instagram <i class="fa fa-instagram"></i></a></li>
+            <li><a href="http://facebook.com/" target="_blank">Facebook <i class="fa fa-facebook"></i></a></li>
+          </ul>
+        </nav>
+      <% end %>
+      <%= render partial: "shared/flash_messages", flash: flash %>
       <%= yield %>
     </div>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>

@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+    <div class="row">
+      <div class="col-md-12">
+        <% @images.each do |img| %>
+          <div class="pull-left gallery-image" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="#">
+              <%= cl_image_tag(img.image_url, width: 260, crop: :fill, alt: "Ryan Usher tattoo") %>
+            </a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render partial: "photoswipe" %>
