@@ -17,8 +17,45 @@
 
 $(document).ready(function() {
   $('.slick-carousel').slick({
+    lazyLoad: 'ondemand',
+    dots: true,
     autoplay: true,
-    mobileFirst: true,
-    variableWidth: true
+    infinite: false,
+    variableWidth: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          infinite: true,
+          fade: true,
+          cssEase: 'linear',
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   })
+
+  $('#ryan_navbar-title, .navbar-brand-ryan').addClass('animated fadeInRight')
 })
