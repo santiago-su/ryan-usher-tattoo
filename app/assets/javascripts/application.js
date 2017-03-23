@@ -51,7 +51,8 @@ $(document).ready(function() {
           fade: true,
           cssEase: 'linear',
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          variableWidth: false
         }
       }
     ]
