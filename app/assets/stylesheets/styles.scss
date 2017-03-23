@@ -277,3 +277,17 @@ a {
   height: 78px;
   width: 80px;
 }
+
+.contact-mobile {
+  position: fixed;
+  bottom: 0;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+  width: 100%;
+
+  span {
+    padding: 10px;
+  }
+}

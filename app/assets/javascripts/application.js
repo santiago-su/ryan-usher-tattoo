@@ -57,6 +57,7 @@ $(document).ready(function() {
       }
     ]
   })
+  AOS.init();
 
   $('#ryan_navbar-title, .navbar-brand-ryan').addClass('animated fadeInRight')
 })
