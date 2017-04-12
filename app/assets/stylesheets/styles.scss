@@ -97,6 +97,7 @@ body {
 
 .header {
   color: white;
+  position: relative;
 
   h1 {
     font-size: 4em;
@@ -289,5 +290,56 @@ a {
 
   span {
     padding: 10px;
+  }
+}
+
+.background-logo-hannya {
+  opacity: 0.3;
+  margin-top: -100px;
+}
+
+// PORTRAIT MOBILE//////////
+@media only screen and (max-device-width: 430px) {
+  .ryan-top-hannya {
+    position: absolute;
+    z-index: 10;
+    top: 35%;
+    opacity: 0.7;
+  }
+}
+
+// LANDSCAPE MOBILE /////
+@media only screen 
+and (max-device-width: 736px) 
+and (orientation: landscape) { 
+  .background-logo-hannya {
+    opacity: 0.3;
+    margin-top: -200px;
+  }
+  .ryan-top-hannya {
+    position: absolute;
+    z-index: 10;
+    top: 45%;
+    left: 24%;
+    opacity: 0.7;
+  }
+}
+
+
+// LANDSCAPE MOBILE IPHONE 5/////
+@media only screen 
+and (min-device-width: 320px)
+and (max-device-width: 568px) 
+and (orientation: landscape) { 
+  .background-logo-hannya {
+    opacity: 0.3;
+    margin-top: -190px;
+  }
+  .ryan-top-hannya {
+    position: absolute;
+    z-index: 10;
+    top: 45%;
+    left: 17%;
+    opacity: 0.7;
   }
 }
