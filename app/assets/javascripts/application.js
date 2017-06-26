@@ -60,4 +60,32 @@ $(document).ready(function() {
   AOS.init();
 
   $('#ryan_navbar-title, .navbar-brand-ryan').addClass('animated fadeInRight')
+
+  var mobileQuery = Modernizr.mq('(max-device-width: 568px)');
+  var feed;
+  var token = '3381328.1677ed0.ea4bedd40dcd46f7a687cf5c9abdae17';
+  if ($('#instafeed').length > 0) {
+    if (mobileQuery) {
+      feed = new Instafeed({
+        get: 'user',
+        userId: '3381328',
+        accessToken: token,
+        sortBy: 'most-recent',
+        limit: 30,
+        resolution: 'low_resolution',
+        template: '<a class="latest-image-inst-mobile" href="{{link}}"><img src="{{image}}" /><p class="small caption">{{caption}}</p></a>'
+      });
+    } else {
+      feed = new Instafeed({
+        get: 'user',
+        userId: '3381328',
+        accessToken: token,
+        sortBy: 'most-recent',
+        limit: 30,
+        resolution: 'standard_resolution',
+        template: '<a class="latest-image-inst" href="{{link}}"><img src="{{image}}" /><p class="small caption-big">{{caption}}</p></a>'
+      });
+    }
+  feed.run();
+  }
 })

@@ -39,6 +39,7 @@
             <li class="<%= 'active ' if current_page?(root_path) %> menu-link"><%= link_to "HOME", root_path %></li>
             <li class="<%= 'active ' if current_page?(about_path) %>menu-link"><%= link_to "ABOUT", about_path %></li>
             <li class="<%= 'active ' if current_page?(gallery_path) %>menu-link"><%= link_to "GALLERY", gallery_path %></li>
+            <li class="<%= 'active ' if current_page?(latest_path) %>menu-link"><%= link_to "LATEST", latest_path %></li>
             <li class="<%= 'active ' if current_page?(contacts_path) %>menu-link"><%= link_to "CONTACT", contacts_path %></li>
             <% if current_user %>
               <li class="menu-link"><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
