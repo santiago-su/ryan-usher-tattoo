@@ -73,7 +73,7 @@ $(document).ready(function() {
         sortBy: 'most-recent',
         limit: 30,
         resolution: 'low_resolution',
-        template: '<a class="latest-image-inst-mobile" href="{{link}}"><img src="{{image}}" /><p class="small caption">{{caption}}</p></a>'
+        template: '<a class="latest-image-inst-mobile" href="{{link}}" target="_blank"><img src="{{image}}" /><p class="small caption">{{caption}}</p></a>'
       });
     } else {
       feed = new Instafeed({
@@ -83,7 +83,7 @@ $(document).ready(function() {
         sortBy: 'most-recent',
         limit: 30,
         resolution: 'standard_resolution',
-        template: '<a class="latest-image-inst" href="{{link}}"><img src="{{image}}" /><p class="small caption-big">{{caption}}</p></a>'
+        template: '<a class="latest-image-inst" href="{{link}}" target="_blank"><img src="{{image}}" /><p class="small caption-big">{{caption}}</p></a>'
       });
     }
   feed.run();
