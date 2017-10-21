@@ -73,7 +73,10 @@ $(document).ready(function() {
         sortBy: 'most-recent',
         limit: 30,
         resolution: 'low_resolution',
-        template: '<a class="latest-image-inst-mobile" href="{{link}}" target="_blank"><img src="{{image}}" /><p class="small caption">{{caption}}</p></a>'
+        template: '<a class="latest-image-inst-mobile" href="{{link}}" target="_blank"><img src="{{image}}" /><p class="small caption">{{caption}}</p></a>',
+        filter: function(image) {
+          return image.tags.indexOf('ru') >= 0;
+        },
       });
     } else {
       feed = new Instafeed({
@@ -83,7 +86,10 @@ $(document).ready(function() {
         sortBy: 'most-recent',
         limit: 30,
         resolution: 'standard_resolution',
-        template: '<a class="latest-image-inst" href="{{link}}" target="_blank"><img src="{{image}}" /><p class="small caption-big">{{caption}}</p></a>'
+        template: '<a class="latest-image-inst" href="{{link}}" target="_blank"><img src="{{image}}" /><p class="small caption-big">{{caption}}</p></a>',
+        filter: function(image) {
+          return image.tags.indexOf('ru') >= 0;
+        },
       });
     }
   feed.run();
