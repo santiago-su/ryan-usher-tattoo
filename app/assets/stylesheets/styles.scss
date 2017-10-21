@@ -91,14 +91,15 @@ body {
 }
 
 .home-page {
-  margin-top: 100px;
   margin-bottom: 60px;
 }
 
 .header {
   color: white;
   position: relative;
-
+  margin-top: 30px;
+  background-color: #000;
+  width: 100%;
   h1 {
     font-size: 4em;
   }
@@ -295,7 +296,7 @@ a {
 
 .background-logo-hannya {
   opacity: 0.3;
-  margin-top: -100px;
+  margin-top: 60px;
 }
 
 .latest-image-inst {
