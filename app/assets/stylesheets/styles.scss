@@ -11,6 +11,7 @@ body {
 
 .big-mask img {
   max-width: 100%;
+  padding: 0 50px 50px 50px;
 }
 
 
@@ -295,7 +296,7 @@ a {
 }
 
 .background-logo-hannya {
-  opacity: 0.3;
+  opacity: 0.5;
   margin-top: 60px;
 }
 
@@ -345,9 +346,14 @@ a {
 
 .logo-big-back {
   width: 30%;
-  margin-bottom: -13em;
+  margin-bottom: -5em;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -30px;
+}
+
+.large-hannyas-home {
+  margin: 0 auto;
 }
 
 h1.ryan-top-hannya-big {
